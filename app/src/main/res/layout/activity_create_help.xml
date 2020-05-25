@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".activity.RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_Create_Help_Back"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:padding="15dp"
+            android:src="@drawable/ic_close" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/graphik_semibold"
+                    android:shadowColor="@color/txt_color"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:text="Create Help Request"
+                    android:textColor="@color/txt_color"
+                    android:textSize="30dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/chivo_regular"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="Post Your Help Request and Spread kindness."
+                    android:textAllCaps="false"
+                    android:textColor="@color/txt_sub_color"
+                    android:textSize="@dimen/txt_size" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/txt_height"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/transparent"
+                        android:fontFamily="@font/chivo_regular"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="I need"
+                        android:textAllCaps="false"
+                        android:textColor="@color/txt_color"
+                        android:textSize="@dimen/txt_size" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="5dp"
+                        android:background="@color/transparent"
+                        android:fontFamily="@font/chivo_regular"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="*max 3 categories"
+                        android:textAllCaps="false"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/txt_size" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border_edt_request">
+
+                    <com.gracepad.hh.views.MultiSelectSpinner
+                        android:id="@+id/sp_Create_Help_Needs"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_centerInParent="true" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_Create_Help_Needs"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edt_height"
+                        android:background="@color/transparent"
+                        android:fontFamily="@font/chivo_regular"
+                        android:gravity="center_vertical"
+                        android:hint="Select your needs"
+                        android:lines="1"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        android:textColor="@color/txt_color"
+                        android:textColorHint="@color/txt_hint_color"
+                        android:textSize="@dimen/txt_size" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/edt_height"
+                        android:layout_height="@dimen/edt_height"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="17dp"
+                        android:src="@drawable/ic_down_arrow" />
+                </RelativeLayout>
+
+                <include
+                    android:id="@+id/layout_Create_Help_Food"
+                    layout="@layout/layout_create_help_food"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/layout_Create_Help_Volunteer"
+                    layout="@layout/layout_create_help_volunteer"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/layout_Create_Help_Fund"
+                    layout="@layout/layout_create_help_fund"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/txt_height"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    android:text="Title"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/txt_size" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_Create_Help_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edt_height"
+                    android:background="@drawable/rounded_border_edt"
+                    android:fontFamily="@font/chivo_regular"
+                    android:hint="eg. Medical Charity"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:nextFocusDown="@id/edt_EditProfile_Email"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/txt_color"
+                    android:textColorHint="@color/txt_hint_color"
+                    android:textSize="@dimen/txt_size" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/txt_height"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    android:text="Category"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/txt_size" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border_edt">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_Create_Help_Category"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edt_height"
+                        android:background="@color/transparent"
+                        android:fontFamily="@font/chivo_regular"
+                        android:gravity="center_vertical"
+                        android:hint="Select category"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        android:textColor="@color/txt_color"
+                        android:textColorHint="@color/txt_hint_color"
+                        android:textSize="@dimen/txt_size" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/edt_height"
+                        android:layout_height="@dimen/edt_height"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="17dp"
+                        android:src="@drawable/ic_down_arrow" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/txt_height"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    android:text="Add Description"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/txt_size" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_Create_Help_Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="105dp"
+                    android:background="@drawable/rounded_border_edt"
+                    android:fontFamily="@font/chivo_regular"
+                    android:gravity="top"
+                    android:hint="Tell here about your charity…"
+                    android:imeOptions="actionDone"
+                    android:inputType="textMultiLine"
+                    android:lines="4"
+                    android:maxLength="500"
+                    android:overScrollMode="always"
+                    android:padding="10dp"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/txt_color"
+                    android:textColorHint="@color/txt_hint_color"
+                    android:textSize="@dimen/txt_size"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/txt_height"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    android:text="Add Photo Details"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/txt_size" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="150dp"
+                            android:layout_height="100dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="10dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/rounded_border_photo"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/ic_add_photo" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:gravity="center_vertical"
+                                        android:text="Add Photo"
+                                        android:textColor="@color/theme_color"
+                                        android:textSize="@dimen/txt_small_size" />
+                                </LinearLayout>
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_temp" />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="150dp"
+                            android:layout_height="100dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="10dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/rounded_border_photo"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/ic_add_photo" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:gravity="center_vertical"
+                                        android:text="Add Photo"
+                                        android:textColor="@color/theme_color"
+                                        android:textSize="@dimen/txt_small_size" />
+                                </LinearLayout>
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop" />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="150dp"
+                            android:layout_height="100dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="10dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/rounded_border_photo"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/ic_add_photo" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:gravity="center_vertical"
+                                        android:text="Add Photo"
+                                        android:textColor="@color/theme_color"
+                                        android:textSize="@dimen/txt_small_size" />
+                                </LinearLayout>
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop" />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="150dp"
+                            android:layout_height="100dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="10dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/rounded_border_photo"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/ic_add_photo" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:gravity="center_vertical"
+                                        android:text="Add Photo"
+                                        android:textColor="@color/theme_color"
+                                        android:textSize="@dimen/txt_small_size" />
+                                </LinearLayout>
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop" />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/txt_height"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center_vertical"
+                            android:text="Start Charity"
+                            android:textColor="@color/txt_color"
+                            android:textSize="@dimen/txt_size" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_border_edt"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:button="@drawable/ic_calender"
+                                android:checked="true" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txt_Create_Help_StartDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/edt_height"
+                                android:layout_weight="1"
+                                android:background="@color/transparent"
+                                android:fontFamily="@font/chivo_regular"
+                                android:gravity="center_vertical"
+                                android:hint="Select Date"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text="17 Apr 2020"
+                                android:textColor="@color/txt_color"
+                                android:textColorHint="@color/txt_hint_color"
+                                android:textSize="@dimen/txt_size" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/txt_height"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center_vertical"
+                            android:text="End Charity"
+                            android:textColor="@color/txt_color"
+                            android:textSize="@dimen/txt_size" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/rounded_border_edt"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:button="@drawable/ic_calender"
+                                android:checked="true" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txt_Create_Help_EndDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/edt_height"
+                                android:layout_weight="1"
+                                android:background="@color/transparent"
+                                android:fontFamily="@font/chivo_regular"
+                                android:gravity="center_vertical"
+                                android:hint="Select Date"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:textColor="@color/txt_color"
+                                android:textColorHint="@color/txt_hint_color"
+                                android:textSize="@dimen/txt_size" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/txt_height"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical"
+                    android:text="Enter State"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/txt_size" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border_edt">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_Create_Help_State"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edt_height"
+                        android:background="@color/transparent"
+                        android:fontFamily="@font/chivo_regular"
+                        android:gravity="center_vertical"
+                        android:hint="State"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Gujarat"
+                        android:textColor="@color/txt_color"
+                        android:textColorHint="@color/txt_hint_color"
+                        android:textSize="@dimen/txt_size" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/edt_height"
+                        android:layout_height="@dimen/edt_height"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="17dp"
+                        android:src="@drawable/ic_down_arrow" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/chk_Create_Help_Urgent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="10dp"
+                    android:text="Urgent Help is Required"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/txt_small_size"
+                    tools:ignore="SpUsage,UnusedAttribute" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_Create_Help_Next"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_height"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rounded_corner_button"
+                    android:fontFamily="@font/chivo_bold"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:padding="10dp"
+                    android:text="Next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_size" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

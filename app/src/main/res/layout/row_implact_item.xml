@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_Row_Impact"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_Row_Impact_Bg"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_Row_Impact_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/graphik_medium"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:lines="1"
+            android:paddingLeft="15dp"
+            android:text="Help Avisa to Continue Her College in Univ"
+            android:textColor="@color/txt_color"
+            android:textSize="@dimen/txt_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_Row_Impact_Days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/chivo_regular"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:text="4 Days left"
+                android:textColor="@color/txt_sub_color"
+                android:textSize="@dimen/txt_small_size" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/txt_sub_color" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_Row_Impact_Fund"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/chivo_regular"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:text="$2,500 Funds"
+                android:textColor="@color/txt_sub_color"
+                android:textSize="@dimen/txt_small_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/layout_Row_Post_Like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingRight="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/btn_height"
+                        android:layout_height="@dimen/btn_height"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_like" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_Row_Impact_Like"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:lines="1"
+                        android:text="24"
+                        android:textColor="@color/txt_sub_color"
+                        android:textSize="@dimen/txt_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_Row_Post_Comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/btn_height"
+                        android:layout_height="@dimen/btn_height"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_comment" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_Row_Impact_Comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:lines="1"
+                        android:text="16"
+                        android:textColor="@color/txt_sub_color"
+                        android:textSize="@dimen/txt_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_Row_Post_Share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/btn_height"
+                        android:layout_height="@dimen/btn_height"
+                        android:padding="15dp"
+                        android:src="@drawable/ic_views" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_Row_Impact_Views"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:lines="1"
+                        android:text="22k"
+                        android:textColor="@color/txt_sub_color"
+                        android:textSize="@dimen/txt_size" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_Row_Impact_Share"
+                    android:layout_width="@dimen/btn_height"
+                    android:layout_height="@dimen/btn_height"
+                    android:padding="15dp"
+                    android:src="@drawable/ic_share" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_Row_Impact_Goal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:spanCount="1" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".activity.LoginActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_Login_Back"
+        android:layout_width="?actionBarSize"
+        android:layout_height="?actionBarSize"
+        android:padding="15dp"
+        android:src="@drawable/ic_close" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?actionBarSize"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/graphik_semibold"
+            android:shadowColor="@color/txt_color"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:text="Log In"
+            android:textColor="@color/txt_color"
+            android:textSize="30dp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_Login_Email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edt_height"
+            android:background="@drawable/rounded_border_edt"
+            android:fontFamily="@font/chivo_regular"
+            android:hint="Email Address"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:maxLength="50"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/txt_color"
+            android:textColorHint="@color/txt_hint_color"
+            android:textSize="@dimen/txt_size" />
+
+        <!--<androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_Login_Password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edt_height"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_border_edt"
+            android:fontFamily="@font/chivo_regular"
+            android:hint="Password"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:maxLength="10"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/txt_color"
+            android:textColorHint="@color/txt_hint_color"
+            android:textSize="@dimen/txt_size" />-->
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_border_edt">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_Login_Password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edt_height"
+                android:background="@color/transparent"
+                android:fontFamily="@font/chivo_regular"
+                android:hint="Password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLength="10"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/txt_color"
+                android:textColorHint="@color/txt_hint_color"
+                android:textSize="@dimen/txt_size" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_Login_ShowHidePassword"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edt_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/chivo_regular"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Show"
+                android:textAllCaps="false"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/txt_size" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btn_Login_ForgotPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/transparent"
+            android:fontFamily="@font/chivo_regular"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:lines="1"
+            android:text="Forgot Password?"
+            android:textAllCaps="false"
+            android:textColor="@color/txt_color"
+            android:textSize="@dimen/txt_size" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_Login"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:background="@drawable/rounded_corner_button"
+            android:fontFamily="@font/chivo_bold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="10dp"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/chivo_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="or"
+            android:textColor="@color/txt_sub_color"
+            android:textSize="@dimen/txt_small_size" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_Login_Facebook"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:background="@drawable/rounded_corner_button_fb"
+            android:fontFamily="@font/chivo_bold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="10dp"
+            android:text="Login with Facebook"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_Login_RegisterT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chivo_regular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="Don't have an account?"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/txt_small_size" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_Login_Register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/chivo_regular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="Register"
+                android:textColor="@color/theme_yellow_color"
+                android:textSize="@dimen/txt_small_size" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

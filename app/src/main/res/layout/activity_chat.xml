@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_search_bg_color"
+    tools:context=".activity.ChatActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_Chat_Profile"
+                android:layout_width="@dimen/img_height"
+                android:layout_height="@dimen/img_height"
+                android:layout_margin="15dp"
+                android:src="@drawable/ic_placeholder_user" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_Chat_UserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/graphik_medium"
+                    android:text="Kevin Sharma"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/txt_small_size" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_Chat_UserPost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/chivo_regular"
+                    android:text="Web Desiner"
+                    android:textColor="@color/txt_sub_color"
+                    android:textSize="@dimen/txt_small_size" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/img_height"
+                android:layout_height="@dimen/img_height"
+                android:padding="15dp"
+                android:src="@drawable/ic_option"
+                android:tint="@color/txt_color" />
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/rv_Chat_Refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/chivo_regular"
+                            android:includeFontPadding="false"
+                            android:text="Pledge Details"
+                            android:textColor="@color/txt_sub_color"
+                            android:textSize="@dimen/txt_small_size" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_package" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/chivo_regular"
+                                android:includeFontPadding="false"
+                                android:text="25 pairs of shoes"
+                                android:textColor="@color/txt_color"
+                                android:textSize="@dimen/txt_size" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/chivo_regular"
+                            android:includeFontPadding="false"
+                            android:text="Expected Delivery"
+                            android:textColor="@color/txt_sub_color"
+                            android:textSize="@dimen/txt_small_size" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_schedule" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/chivo_regular"
+                                android:includeFontPadding="false"
+                                android:text="30th Apr 2020, 9AM - 12AM"
+                                android:textColor="@color/txt_color"
+                                android:textSize="@dimen/txt_size" />
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/divider_color" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/chivo_regular"
+                            android:includeFontPadding="false"
+                            android:text="Additional Notes"
+                            android:textColor="@color/txt_sub_color"
+                            android:textSize="@dimen/txt_small_size" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/chivo_regular"
+                                android:includeFontPadding="false"
+                                android:text="Additional details from doner side"
+                                android:textColor="@color/txt_color"
+                                android:textSize="@dimen/txt_size" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btn_ChangePassword_Cancel"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/btn_height"
+                                android:layout_marginRight="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rounded_corner_button_trans"
+                                android:fontFamily="@font/graphik_medium"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:padding="10dp"
+                                android:text="Enter Quantity"
+                                android:textAllCaps="false"
+                                android:textColor="@color/theme_color"
+                                android:textSize="@dimen/txt_small_size" />
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/btn_ChangePassword_Submit"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/btn_height"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rounded_corner_button"
+                                android:fontFamily="@font/graphik_medium"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:padding="10dp"
+                                android:text="Accept Request"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/txt_small_size" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/border_color" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:fontFamily="@font/chivo_regular"
+                            android:includeFontPadding="false"
+                            android:text="Donation request accepted"
+                            android:textColor="@color/txt_sub_color"
+                            android:textSize="@dimen/txt_small_size" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"
+                            android:background="@color/border_color" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_Chat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:overScrollMode="never"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:spanCount="1" />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/border_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_corner_edt"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/txt_Message_Search"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/img_height"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="Type your message.."
+                        android:imeOptions="actionSearch"
+                        android:inputType="textNoSuggestions"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/txt_color"
+                        android:textColorHint="@color/txt_hint_color"
+                        android:textSize="@dimen/txt_size" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="35dp"
+                        android:layout_height="@dimen/img_height"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:src="@drawable/ic_attachment" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="35dp"
+                        android:layout_height="@dimen/img_height"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:src="@drawable/ic_emoticons" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btn_Chat_Send"
+                    android:layout_width="@dimen/img_height"
+                    android:layout_height="@dimen/img_height"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/rounded_corner_button"
+                    android:src="@drawable/ic_send"
+                    android:tint="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.CharityDetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.NoActionBar.AppBarOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.NoActionBar.PopupOverlay" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".activity.CharityDetailActivity"
+        tools:showIn="@layout/activity_charity_detail">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/large_text" />
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|end"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.CharityDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fitsSystemWindows="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context=".activity.CharityDetailActivity"
+            tools:showIn="@layout/activity_charity_detail">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fitsSystemWindows="true">
+
+                    <com.gracepad.hh.views.SquareImageView
+                        android:id="@+id/img_CharityDetail_Cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_temp"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_CharityDetail_ActionBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_CharityDetail_Back"
+                            android:layout_width="?actionBarSize"
+                            android:layout_height="?actionBarSize"
+                            android:padding="17dp"
+                            android:src="@drawable/ic_back"
+                            android:tint="@color/white" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/graphik_semibold"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:textColor="@color/txt_color"
+                            android:textSize="@dimen/txt_size" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_CharityDetail_Bookmark"
+                            android:layout_width="?actionBarSize"
+                            android:layout_height="?actionBarSize"
+                            android:padding="17dp"
+                            android:src="@drawable/ic_bookmark"
+                            android:tint="@color/white" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_CharityDetail_Name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/chivo_regular"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:lineSpacingMultiplier="0.9"
+                            android:lines="3"
+                            android:text="Help Avisa to Continue Her Study on Stanford University"
+                            android:textColor="@color/txt_color"
+                            android:textSize="@dimen/txt_large_size" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_CharityDetail_Review"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:src="@drawable/ic_star" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txt_CharityDetail_Review"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/chivo_regular"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="4.5"
+                                android:textColor="@color/theme_yellow_color"
+                                android:textSize="@dimen/txt_size" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!--<LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_CharityDetail_Price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/chivo_regular"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:lines="1"
+                            android:text="$12,000"
+                            android:textColor="@color/theme_yellow_color"
+                            android:textSize="@dimen/txt_small_size" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/chivo_regular"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:lines="1"
+                            android:text="Funds Collected from"
+                            android:textColor="@color/txt_sub_color"
+                            android:textSize="@dimen/txt_small_size" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_CharityDetail_PriceTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/chivo_regular"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:lines="1"
+                            android:text="$500.000"
+                            android:textColor="@color/txt_sub_color"
+                            android:textSize="@dimen/txt_small_size" />
+                    </LinearLayout>-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/divider_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/btn_height"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/layout_Row_Post_Like"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingRight="10dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/btn_height"
+                                android:layout_height="@dimen/btn_height"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_like" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txt_Row_Impact_Like"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:includeFontPadding="false"
+                                android:lines="1"
+                                android:text="24"
+                                android:textColor="@color/txt_sub_color"
+                                android:textSize="@dimen/txt_size" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_Row_Post_Comment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/btn_height"
+                                android:layout_height="@dimen/btn_height"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_comment" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txt_Row_Impact_Comment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:includeFontPadding="false"
+                                android:lines="1"
+                                android:text="16"
+                                android:textColor="@color/txt_sub_color"
+                                android:textSize="@dimen/txt_size" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_Row_Post_Share"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/btn_height"
+                                android:layout_height="@dimen/btn_height"
+                                android:padding="15dp"
+                                android:src="@drawable/ic_views" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txt_Row_Impact_Views"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:includeFontPadding="false"
+                                android:lines="1"
+                                android:text="22k"
+                                android:textColor="@color/txt_sub_color"
+                                android:textSize="@dimen/txt_size" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_Row_Impact_Share"
+                            android:layout_width="@dimen/btn_height"
+                            android:layout_height="@dimen/btn_height"
+                            android:padding="15dp"
+                            android:src="@drawable/ic_share" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/divider_color" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_CharityDetail_Goal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:overScrollMode="never"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:spanCount="1" />
+
+                    <!--<View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/divider_color" />-->
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_CharityDetail_Description"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/chivo_regular"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adiping elit, sed do eiusmod tempor ut labore et dolore magna aliqua"
+                        android:textColor="@color/txt_sub_color"
+                        android:textSize="@dimen/txt_small_size" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/divider_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_temp_user"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_overlay="true"
+                            app:civ_border_width="1dp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_CharityDetail_PostUserName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/chivo_regular"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:lines="1"
+                            android:text="Cak Mat"
+                            android:textColor="@color/theme_color"
+                            android:textSize="@dimen/txt_small_size" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@color/divider_color" />
+
+                        <!--<androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="3dp"
+                            android:src="@drawable/ic_outline_people" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_CharityDetail_PostViewCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/chivo_regular"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:lines="1"
+                            android:text="812"
+                            android:textColor="@color/txt_color"
+                            android:textSize="@dimen/txt_small_size" />-->
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="3dp"
+                            android:src="@drawable/ic_timer" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txt_CharityDetail_DaysLeft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/chivo_regular"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:lines="1"
+                            android:text="15 days left"
+                            android:textColor="@color/txt_color"
+                            android:textSize="@dimen/txt_small_size" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/divider_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="10dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true">
+
+                            <com.gracepad.hh.views.SquareImageView
+                                android:id="@+id/img_CharityDetail_Gallery1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_temp"
+                                app:sriv_left_bottom_corner_radius="10dp"
+                                app:sriv_left_top_corner_radius="10dp"
+                                app:sriv_right_bottom_corner_radius="10dp"
+                                app:sriv_right_top_corner_radius="10dp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="10dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true">
+
+                            <com.gracepad.hh.views.SquareImageView
+                                android:id="@+id/img_CharityDetail_Gallery2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_temp"
+                                app:sriv_left_bottom_corner_radius="10dp"
+                                app:sriv_left_top_corner_radius="10dp"
+                                app:sriv_right_bottom_corner_radius="10dp"
+                                app:sriv_right_top_corner_radius="10dp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="10dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true">
+
+                            <com.gracepad.hh.views.SquareImageView
+                                android:id="@+id/img_CharityDetail_Gallery3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_temp"
+                                app:sriv_left_bottom_corner_radius="10dp"
+                                app:sriv_left_top_corner_radius="10dp"
+                                app:sriv_right_bottom_corner_radius="10dp"
+                                app:sriv_right_top_corner_radius="10dp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="10dp"
+                            app:cardPreventCornerOverlap="true"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.gracepad.hh.views.SquareImageView
+                                    android:id="@+id/img_CharityDetail_Gallery4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_temp"
+                                    app:sriv_left_bottom_corner_radius="10dp"
+                                    app:sriv_left_top_corner_radius="10dp"
+                                    app:sriv_right_bottom_corner_radius="10dp"
+                                    app:sriv_right_top_corner_radius="10dp" />
+
+                                <com.gracepad.hh.views.SquareImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@color/theme_trans_color"
+                                    app:sriv_left_bottom_corner_radius="10dp"
+                                    app:sriv_left_top_corner_radius="10dp"
+                                    app:sriv_right_bottom_corner_radius="10dp"
+                                    app:sriv_right_top_corner_radius="10dp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerInParent="true"
+                                    android:fontFamily="@font/chivo_regular"
+                                    android:gravity="center"
+                                    android:paddingTop="20dp"
+                                    android:paddingBottom="20dp"
+                                    android:text="3+\nMore"
+                                    android:textColor="@color/white"
+                                    tools:ignore="HardcodedText" />
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/divider_color" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_CharityDetail_Participation"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/btn_height"
+                        android:background="@drawable/rounded_corner_category">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/transparent"
+                            android:fontFamily="@font/graphik_medium"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:padding="10dp"
+                            android:text="Show Your Participation"
+                            android:textAllCaps="false"
+                            android:textColor="@color/theme_yellow_color"
+                            android:textSize="@dimen/txt_size" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/btn_height"
+                            android:layout_height="@dimen/btn_height"
+                            android:padding="15dp"
+                            android:src="@drawable/ic_right_arrow" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_CharityDetail_DonorThrough"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/btn_height"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rounded_corner_button_trans">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/transparent"
+                            android:fontFamily="@font/graphik_medium"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:padding="10dp"
+                            android:text="Donor Thought"
+                            android:textAllCaps="false"
+                            android:textColor="@color/theme_color"
+                            android:textSize="@dimen/txt_size" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/btn_height"
+                            android:layout_height="@dimen/btn_height"
+                            android:padding="15dp"
+                            android:src="@drawable/ic_right_arrow"
+                            android:tint="@color/theme_color" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <!--<View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/divider_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_camera" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_smile" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edt_height"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_border_edt"
+                    android:hint="Write a comment…"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/txt_color"
+                    android:textColorHint="@color/txt_hint_color" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_send" />
+            </LinearLayout>-->
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/divider_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_CharityDetail_Like"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/rounded_border_edt"
+                        android:padding="20dp"
+                        android:src="@drawable/ic_favorite" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/chivo_regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:lines="1"
+                        android:text="Like"
+                        android:textColor="@color/txt_sub_color"
+                        android:textSize="@dimen/txt_extra_small_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_CharityDetail_Comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/rounded_border_edt"
+                        android:padding="20dp"
+                        android:src="@drawable/ic_comment" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/chivo_regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:lines="1"
+                        android:text="Comment"
+                        android:textColor="@color/txt_sub_color"
+                        android:textSize="@dimen/txt_extra_small_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_CharityDetail_Share"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/rounded_border_edt"
+                        android:padding="20dp"
+                        android:src="@drawable/ic_share" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/chivo_regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:lines="1"
+                        android:text="Share"
+                        android:textColor="@color/txt_sub_color"
+                        android:textSize="@dimen/txt_extra_small_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_CharityDetail_Donate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/rounded_corner_button"
+                        android:padding="20dp"
+                        android:src="@drawable/ic_help" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/chivo_regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:lines="1"
+                        android:text="Donate Now"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/txt_extra_small_size" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

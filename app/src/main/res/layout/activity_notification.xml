@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".activity.NotificationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_Notification_Back"
+                android:layout_width="?actionBarSize"
+                android:layout_height="?actionBarSize"
+                android:padding="17dp"
+                android:src="@drawable/ic_back" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="?actionBarSize"
+                android:layout_height="?actionBarSize"
+                android:padding="5dp"
+                android:src="@drawable/ic_notification" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/graphik_semibold"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:paddingLeft="10dp"
+                android:text="All Notification"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/txt_size" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_Notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:spanCount="1" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

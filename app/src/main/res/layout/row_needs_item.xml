@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/txt_height"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_Row_Needs_Count"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/rounded_corner_button"
+            android:fontFamily="@font/chivo_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="✓"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_small_size" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_Row_Needs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/chivo_regular"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:paddingLeft="20dp"
+            android:text="Demo"
+            android:textColor="@color/txt_color"
+            android:textSize="@dimen/txt_small_size" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

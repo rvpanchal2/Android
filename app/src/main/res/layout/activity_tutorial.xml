@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:attrs="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".activity.TutorialActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_Tutorial"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.rd.PageIndicatorView
+                android:id="@+id/indicator_Tutorial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                attrs:piv_animationType="thinWorm"
+                attrs:piv_dynamicCount="true"
+                attrs:piv_interactiveAnimation="true"
+                attrs:piv_padding="15dp"
+                attrs:piv_radius="5dp"
+                attrs:piv_selectedColor="@color/vp_indicator"
+                attrs:piv_strokeWidth="1dp"
+                attrs:piv_unselectedColor="@color/vp_indicator_selected"
+                attrs:piv_viewPager="@id/vp_Tutorial" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_Tutorial_Next"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/rounded_corner_button_trans"
+                android:fontFamily="@font/chivo_bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:padding="10dp"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/txt_size" />
+
+            <LinearLayout
+                android:id="@+id/layout_Tutorial_Login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_Tutorial_LoginT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/chivo_regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Have an account?"
+                    android:textColor="@color/txt_color"
+                    android:textSize="@dimen/txt_small_size" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_Tutorial_Login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/chivo_regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Login Now"
+                    android:textColor="@color/theme_yellow_color"
+                    android:textSize="@dimen/txt_small_size" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

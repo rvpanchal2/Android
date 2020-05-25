@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">GracePad</string>
+
+    <string name="network">Please check your internet connection and try again.</string>
+    <string name="error">There is an error. Please try again later.</string>
+    <string name="loading" tools:ignore="TypographyEllipsis">Loading...</string>
+
+    <string name="default_notification_channel_id">Default</string>
+
+    <string name="splash_content">Lead a movement to enable grace, empathy, happiness, and positivity among people through Internet and mobile channels.</string>
+    <string name="email_address_alert">Enter your email address below and we’ll send you an email with instructions on how to change your password</string>
+
+    <string name="tutorial_title_1">Easy Care &amp; Help</string>
+    <string name="tutorial_title_2">Easy Care &amp; Help</string>
+    <string name="tutorial_title_3">Grace Network</string>
+    <string name="tutorial_description_1">Serving others in innovative ways</string>
+    <string name="tutorial_description_2">Transform the world by helping every person in-need</string>
+    <string name="tutorial_description_3">A Portal to connect change makers</string>
+
+
+    <!--TODO : VALIDATION & MESSAGES -->
+    <string name="email_validation">Please enter your valid email id</string>
+    <string name="password_validation">Please enter the valid password</string>
+    <string name="current_password_validation">Please enter the valid current password</string>
+    <string name="confirm_password_validation">Password and confirm password dose not matched</string>
+    <string name="number_validation">Please enter your valid mobile number</string>
+    <string name="name_validation">Please enter your valid name</string>
+
+
+    <!--TODO : Array-->
+    <string-array name="type_spinner">
+        <item>Pcs</item>
+        <item>Kg</item>
+        <item>Ltr</item>
+    </string-array>
+</resources>

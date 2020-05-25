@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_Row_Review"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_Row_Review_UserProfile"
+            android:layout_width="@dimen/img_height"
+            android:layout_height="@dimen/img_height"
+            android:src="@drawable/ic_placeholder_user"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="0dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_Row_Review_Username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/graphik_medium"
+                android:includeFontPadding="false"
+                android:text="Terrell Underwood"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/txt_small_size" />
+
+            <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                android:id="@+id/rb_Row_Review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:numStars="5"
+                app:srb_borderColor="@color/theme_color"
+                app:srb_fillColor="@color/theme_color"
+                app:srb_isIndicator="true"
+                app:srb_rating="5"
+                app:srb_starBorderWidth="2"
+                app:srb_starSize="@dimen/txt_small_size"
+                app:srb_stepSize="1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_Row_Review_Message"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/chivo_regular"
+                android:includeFontPadding="false"
+                android:text="I had dinner with a girlfriend. Menu is perfect, something for everyone. Service was awesome and Jason was very accommodating. I will be back definitely!"
+                android:textColor="@color/txt_sub_color"
+                android:textSize="@dimen/txt_small_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="50dp"
+        android:background="@color/divider_color" />
+</LinearLayout>

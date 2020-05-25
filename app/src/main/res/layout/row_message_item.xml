@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_Row_Message"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_Row_Message_Profile"
+            android:layout_width="@dimen/img_height"
+            android:layout_height="@dimen/img_height"
+            android:src="@drawable/ic_placeholder_user" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_Row_Message_UserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/graphik_medium"
+                android:text="Kevin Sharma"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/txt_small_size" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_Row_Message_UserMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/chivo_regular"
+                android:text="Web Desiner"
+                android:textColor="@color/txt_sub_color"
+                android:textSize="@dimen/txt_small_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_Row_Message_Count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="@drawable/rounded_border_theme_yellow"
+                android:fontFamily="@font/chivo_regular"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="5dp"
+                android:text="20"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_small_size" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_Row_Message_Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/chivo_regular"
+                android:gravity="center_vertical|right"
+                android:text="07:12PM"
+                android:textColor="@color/txt_sub_color"
+                android:textSize="@dimen/txt_small_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color" />
+</LinearLayout>

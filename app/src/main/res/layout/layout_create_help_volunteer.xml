@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/border_color" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/graphik_semibold"
+            android:gravity="center_vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:text="Volunteer"
+            android:textColor="@color/txt_color"
+            android:textSize="@dimen/txt_size" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/chivo_regular"
+            android:includeFontPadding="false"
+            android:paddingBottom="20dp"
+            android:text="Select Role"
+            android:textColor="@color/txt_sub_color"
+            android:textSize="@dimen/txt_size" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_Create_Help_Volunteer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_Create_Help_Volunteer_Role"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edt_height"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_border_edt"
+                android:fontFamily="@font/chivo_regular"
+                android:hint="Add Role"
+                android:imeOptions="actionDone"
+                android:inputType="textCapWords"
+                android:maxLength="10"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/txt_color"
+                android:textColorHint="@color/txt_hint_color"
+                android:textSize="@dimen/txt_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_border_edt"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_Create_Help_Volunteer_Person"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/graphik_medium"
+                    android:gravity="center_vertical"
+                    android:hint="0"
+                    android:imeOptions="actionDone"
+                    android:includeFontPadding="false"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:maxLength="4"
+                    android:paddingLeft="15dp"
+                    android:textColor="@color/txt_color"
+                    android:textColorHint="@color/txt_hint_color"
+                    android:textSize="@dimen/txt_size" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_Create_Help_Volunteer_RoleType"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/rounded_corner_right"
+                    android:fontFamily="@font/chivo_regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="Prsn"
+                    android:textColor="@color/txt_color"
+                    android:textColorHint="@color/txt_hint_color"
+                    android:textSize="@dimen/txt_small_size" />
+            </LinearLayout>
+        </LinearLayout>-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_Create_Help_Volunteer_AddRole"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_corner_button_trans"
+            android:fontFamily="@font/chivo_bold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="10dp"
+            android:text="+ Add New Role"
+            android:textAllCaps="false"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/txt_size" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/border_color" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

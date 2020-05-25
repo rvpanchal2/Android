@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?><!--<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:id="@+id/card_Row_Restaurant"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_Row_FeaturedImpact"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_Row_FeaturedImpact_bg"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_placeholder" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_Row_FeaturedImpact_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/chivo_regular"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:lines="1"
+                android:text="Help Avisa to Continue Her Study on Stanford University"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/txt_large_size" />
+
+            <!--<LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_Row_FeaturedImpact_Price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/chivo_regular"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:text="$12,000"
+                    android:textColor="@color/theme_yellow_color"
+                    android:textSize="@dimen/txt_small_size" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/chivo_regular"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:text="Funds Collected"
+                    android:textColor="@color/txt_sub_color"
+                    android:textSize="@dimen/txt_small_size" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/txt_sub_color" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txt_Row_FeaturedImpact_Days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/chivo_regular"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:text="15"
+                    android:textColor="@color/theme_yellow_color"
+                    android:textSize="@dimen/txt_small_size" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/chivo_regular"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:text="Days Left"
+                    android:textColor="@color/txt_sub_color"
+                    android:textSize="@dimen/txt_small_size" />
+            </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/layout_Row_Post_Like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_like" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_Row_Impact_Like"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:lines="1"
+                        android:text="24"
+                        android:textColor="@color/txt_sub_color"
+                        android:textSize="@dimen/txt_size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_Row_Post_Comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_comment" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_Row_Impact_Comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:lines="1"
+                        android:text="16"
+                        android:textColor="@color/txt_sub_color"
+                        android:textSize="@dimen/txt_size" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img_Row_Impact_Share"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_share" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp">
+
+            <com.gracepad.hh.views.DonutProgress
+                android:id="@+id/seek_Row_FeaturedImpact_Progress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:donut_circle_starting_degree="270"
+                app:donut_finished_color="@color/theme_color"
+                app:donut_finished_stroke_width="3dp"
+                app:donut_max="100"
+                app:donut_progress="25"
+                app:donut_text_color="@color/transparent"
+                app:donut_unfinished_color="@color/border_color"
+                app:donut_unfinished_stroke_width="3dp" />
+
+            <TextView
+                android:id="@+id/txt_Row_FeaturedImpact_Progress"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="25%"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/txt_size" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout><!--</androidx.cardview.widget.CardView>-->

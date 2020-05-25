@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#171880</color>
+    <!--    <color name="colorPrimaryDark">#171880</color>-->
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#2E2E2E</color>
+
+    <!--COMMON COLOR-->
+    <color name="white" tools:ignore="MissingDefaultResource">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#E7E7E7</color>
+    <color name="gray0">#f3f3f3</color>
+    <color name="gray1">#e7e7e7</color>
+    <color name="gray2">#C9CACC</color>
+    <color name="gray3">#B0B0B3</color>
+    <color name="gray4">#919195</color>
+    <color name="gray5">#737373</color>
+    <color name="gray7">#606060</color>
+    <color name="gray8">#494949</color>
+    <color name="gray9">#333333</color>
+    <color name="transparent">#00000000</color>
+    <color name="white_transparent">#b4ffffff</color>
+    <color name="black_transparent">#8f000000</color>
+
+    <!--TODO : APP COLOR-->
+    <color name="theme_color">@color/colorPrimary</color>
+    <color name="theme_trans_color">#CC171880</color>
+    <color name="theme_yellow_color">#ff9300</color>
+    <color name="btn_bg_color">#F1F0F9</color>
+    <color name="cancel_btn_color">#f55665</color>
+    <color name="cancel_btn_bg_color">#FFF9F9</color>
+    <color name="edt_btn_bg_color">#f1f1f1</color>
+    <color name="bg_color">#FFFFFF</color>
+    <color name="txt_color">#312b29</color>
+    <color name="txt_sub_color">#8e8e93</color>
+    <color name="txt_hint_color">#d0d0d0</color>
+    <color name="vp_indicator">@color/colorPrimary</color>
+    <color name="vp_indicator_selected">#e7e7f2</color>
+    <color name="border_color">#dfd5d5</color>
+    <color name="divider_color">#EAEAEA</color>
+    <color name="fb_color">#637ff1</color>
+    <color name="placeholder_color">#E7E7E7</color>
+    <color name="notification_bg_color">#F9F9F9</color>
+    <color name="category_bg_color">#FFF9F1</color>
+    <color name="bottom_sheet_bg_color">#FFFFFF</color>
+    <color name="required_bg_color">#F1F0F9</color>
+    <color name="received_bg_color">#F0FCFE</color>
+    <color name="pledge_bg_color">#FFFBF1</color>
+    <color name="chat_search_bg_color">#fafafa</color>
+    <color name="chat_right">#edf7f8</color>
+    <color name="chat_left">#FFFFFF</color>
+</resources>

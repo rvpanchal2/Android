@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".activity.RegisterActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_Register_Back"
+        android:layout_width="?actionBarSize"
+        android:layout_height="?actionBarSize"
+        android:padding="15dp"
+        android:src="@drawable/ic_close" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?actionBarSize"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/graphik_semibold"
+            android:shadowColor="@color/txt_color"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:text="Register"
+            android:textColor="@color/txt_color"
+            android:textSize="30dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:background="@color/transparent"
+            android:fontFamily="@font/chivo_regular"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:text="Please fill this form with real data of you"
+            android:textAllCaps="false"
+            android:textColor="@color/txt_sub_color"
+            android:textSize="@dimen/txt_size" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_Register_FullName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edt_height"
+            android:background="@drawable/rounded_border_edt"
+            android:fontFamily="@font/chivo_regular"
+            android:hint="Full Name"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLength="50"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/txt_color"
+            android:textColorHint="@color/txt_hint_color"
+            android:textSize="@dimen/txt_size" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_Register_Email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edt_height"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_border_edt"
+            android:fontFamily="@font/chivo_regular"
+            android:hint="Email Address"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:maxLength="50"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/txt_color"
+            android:textColorHint="@color/txt_hint_color"
+            android:textSize="@dimen/txt_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_border_edt">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/img_height"
+                android:layout_height="@dimen/img_height"
+                android:padding="10dp"
+                android:src="@drawable/ic_us_flag" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_Register_MoNumber_Code"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edt_height"
+                android:fontFamily="@font/chivo_regular"
+                android:gravity="center"
+                android:paddingRight="10dp"
+                android:text="+1"
+                android:textAllCaps="false"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/txt_size" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/border_color" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_Register_MoNumber"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edt_height"
+                android:background="@color/transparent"
+                android:fontFamily="@font/chivo_regular"
+                android:hint="0000 0000 0000"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/txt_color"
+                android:textColorHint="@color/txt_hint_color"
+                android:textSize="@dimen/txt_size" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_border_edt">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_Register_Password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edt_height"
+                android:background="@color/transparent"
+                android:fontFamily="@font/chivo_regular"
+                android:hint="Password"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:maxLength="10"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/txt_color"
+                android:textColorHint="@color/txt_hint_color"
+                android:textSize="@dimen/txt_size" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_Register_Password_ShowHide"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edt_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/chivo_regular"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Show"
+                android:textAllCaps="false"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/txt_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_border_edt">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_Register_ConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edt_height"
+                android:background="@color/transparent"
+                android:fontFamily="@font/chivo_regular"
+                android:hint="Re-Enter Password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLength="10"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/txt_color"
+                android:textColorHint="@color/txt_hint_color"
+                android:textSize="@dimen/txt_size" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_Register_ConfirmPassword_ShowHide"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edt_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/chivo_regular"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Show"
+                android:textAllCaps="false"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/txt_size" />
+        </RelativeLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/theme_yellow_color"
+                android:text="Individual"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/txt_small_size"
+                tools:ignore="SpUsage,UnusedAttribute" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/theme_yellow_color"
+                android:text="NGO      "
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/txt_small_size"
+                tools:ignore="SpUsage,UnusedAttribute" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/theme_yellow_color"
+                android:text="Corporate"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/txt_small_size"
+                tools:ignore="SpUsage,UnusedAttribute" />
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_Register"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_corner_button"
+            android:fontFamily="@font/chivo_bold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:padding="10dp"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_Register_LoginT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/chivo_regular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="Don't have an account?"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/txt_small_size" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_Register_Login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/chivo_regular"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="Login Now"
+                android:textColor="@color/theme_yellow_color"
+                android:textSize="@dimen/txt_small_size" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

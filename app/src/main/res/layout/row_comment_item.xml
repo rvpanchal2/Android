@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/layout_Row_Comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_Row_Comment_User"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_temp_user"
+            app:civ_border_color="@color/white"
+            app:civ_border_overlay="true"
+            app:civ_border_width="1dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/rounded_corner_comment_bg"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_Row_Comment_UserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/graphik_medium"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:text="El Primo"
+                android:textColor="@color/txt_color"
+                android:textSize="@dimen/txt_size" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_Row_Comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/chivo_regular"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:text="Lorem ipsum dolor sit amet, consectetur adiping elit, sed do eiusmod tempor ut labore et dolore magna aliqua"
+                android:textColor="@color/txt_sub_color"
+                android:textSize="@dimen/txt_small_size" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

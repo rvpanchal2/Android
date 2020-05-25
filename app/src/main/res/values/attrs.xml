@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SegmentedGroup">
+        <attr name="sc_corner_radius" format="dimension" />
+        <attr name="sc_border_width" format="dimension" />
+        <attr name="sc_tint_color" format="color" />
+        <attr name="sc_checked_text_color" format="color" />
+    </declare-styleable>
+
+    <!-- Declare custom theme attributes that allow changing which styles are
+         used for button bars depending on the API level.
+         ?android:attr/buttonBarStyle is new as of API 11 so this is
+         necessary to support previous API levels. -->
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="Theme">
+        <attr name="progressHintStyle" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="ProgressHint">
+        <attr name="popupLayout" format="reference" />
+        <attr name="popupOffset" format="dimension" />
+        <attr name="popupStyle" format="enum">
+            <enum name="follow" value="0" />
+            <enum name="fixed" value="1" />
+        </attr>
+        <attr name="popupAnimationStyle" format="reference" />
+        <attr name="popupAlwaysShown" format="boolean" />
+        <attr name="popupDraggable" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="DonutProgress">
+        <attr name="donut_progress" format="integer" />
+        <attr name="donut_max" format="integer" />
+
+        <attr name="donut_unfinished_color" format="color" />
+        <attr name="donut_finished_color" format="color" />
+
+        <attr name="donut_finished_stroke_width" format="dimension" />
+        <attr name="donut_unfinished_stroke_width" format="dimension" />
+
+        <attr name="donut_text_size" format="dimension" />
+        <attr name="donut_text_color" format="color" />
+
+        <attr name="donut_prefix_text" format="string" />
+        <attr name="donut_suffix_text" format="string" />
+        <attr name="donut_text" format="string" />
+
+        <attr name="donut_background_color" format="color" />
+
+        <attr name="donut_inner_bottom_text" format="string" />
+        <attr name="donut_inner_bottom_text_size" format="dimension" />
+        <attr name="donut_inner_bottom_text_color" format="color" />
+
+        <attr name="donut_circle_starting_degree" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="ArcProgress">
+        <attr name="arc_progress" format="integer" />
+        <attr name="arc_angle" format="float" />
+        <attr name="arc_stroke_width" format="dimension" />
+        <attr name="arc_max" format="integer" />
+
+        <attr name="arc_unfinished_color" format="color" />
+        <attr name="arc_finished_color" format="color" />
+
+        <attr name="arc_text_size" format="dimension" />
+        <attr name="arc_text_color" format="color" />
+
+        <attr name="arc_suffix_text" format="string" />
+        <attr name="arc_suffix_text_size" format="dimension" />
+        <attr name="arc_suffix_text_padding" format="dimension" />
+
+        <attr name="arc_bottom_text" format="string" />
+        <attr name="arc_bottom_text_size" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CircularSeekBar">
+        <attr name="progress" format="integer" />
+        <attr name="max" format="integer" />
+        <attr name="move_outside_circle" format="boolean" />
+        <attr name="maintain_equal_circle" format="boolean" />
+        <attr name="use_custom_radii" format="boolean" />
+        <attr name="circle_x_radius" format="float" />
+        <attr name="circle_y_radius" format="float" />
+        <attr name="circle_stroke_width" format="float" />
+        <attr name="pointer_radius" format="float" />
+        <attr name="pointer_halo_width" format="float" />
+        <attr name="pointer_halo_border_width" format="float" />
+        <attr name="circle_color" format="string" />
+        <attr name="circle_progress_color" format="string" />
+        <attr name="pointer_color" format="string" />
+        <attr name="pointer_halo_color" format="string" />
+        <attr name="pointer_halo_color_ontouch" format="string" />
+        <attr name="pointer_alpha_ontouch" format="integer" />
+        <attr name="start_angle" format="float" />
+        <attr name="end_angle" format="float" />
+        <attr name="circle_fill" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="SelectableRoundedImageView">
+        <attr name="sriv_left_top_corner_radius" format="dimension" />
+        <attr name="sriv_right_top_corner_radius" format="dimension" />
+        <attr name="sriv_left_bottom_corner_radius" format="dimension" />
+        <attr name="sriv_right_bottom_corner_radius" format="dimension" />
+        <attr name="sriv_border_width" format="dimension" />
+        <attr name="sriv_border_color" format="color" />
+        <attr name="sriv_oval" format="boolean" />
+        <attr name="android:scaleType" />
+    </declare-styleable>
+</resources>

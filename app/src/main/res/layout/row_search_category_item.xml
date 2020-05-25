@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gracepad.hh.views.SquareLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_Row_SearchCategory"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:background="@drawable/rounded_corner_button_trans"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_Row_SearchCategory_Item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_temp_category"
+        android:tint="@color/theme_color" />
+</com.gracepad.hh.views.SquareLinearLayout>
